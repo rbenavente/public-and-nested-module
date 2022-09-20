@@ -1,3 +1,12 @@
+variable "acl" {
+  type    = string
+  defautl = "public-read"
+}
+resource "aws_s3_bucket" "s3_bucket" {
+  bucket    = "abc"
+  acl       = var.acl
+ }
+
 module "local_module" {
   source  = "./module"
 }
@@ -19,3 +28,5 @@ module "public_module" {
   }
   server_side_encryption_enabled = false
 }
+  
+  
