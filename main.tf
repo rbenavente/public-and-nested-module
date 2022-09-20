@@ -1,6 +1,6 @@
 variable "acl" {
   type    = string
-  defautl = "public-read"
+  default = "public-read"
 }
 resource "aws_s3_bucket" "s3_bucket" {
   bucket    = "abc"
